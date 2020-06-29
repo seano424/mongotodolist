@@ -8,12 +8,11 @@ const _ = require('lodash');
 
 const Schema = mongoose.Schema;
 
-
 const app = express()
 const port = 3000
 const workflow = []
 
-mongoose.connect('mongodb://localhost:27017/todolistDB', {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect('mongodb+srv://admin-sean:test1234@cluster0-uthc5.mongodb.net/todolistDB', {useNewUrlParser: true, useUnifiedTopology: true});
 
 app.set('view engine', 'ejs')
 
@@ -128,7 +127,7 @@ app.post('/delete', function(req, res) {
       });
   }
 })
-// 
+//
 // app.listen(port, function() {
 //   console.log(`Server Starts on ${port}`)
 // });
